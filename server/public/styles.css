@@ -1,3 +1,8 @@
-img {
-  object-fit: scale-down;
+body {
+  background-color: rgb(240, 239, 239);
+}
+
+.card-img{
+  object-fit: contain;
+  height: 150px;
 }

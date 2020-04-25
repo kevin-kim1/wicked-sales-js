@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Header(props) {
   return (
-    <nav className="navbar bg-dark">
+    <nav className="navbar bg-dark mb-3">
       <span style={{ color: 'white' }} className="navbar-brand mb-0 h1"> <i className="fas fa-dollar-sign"></i> Wicked Sales</span>
     </nav>
   );
