@@ -12,3 +12,7 @@ body {
   object-fit: contain;
   height: 190px;
 }
+
+.cursor {
+  cursor: pointer;
+}

@@ -31,7 +31,8 @@ export default class ProductList extends React.Component {
       productCards = this.state.products.map(product =>
         <ProductListItem
           key={product.productId}
-          item={product}
+          product={product}
+          setView={this.props.setView}
         />
       );
     }
