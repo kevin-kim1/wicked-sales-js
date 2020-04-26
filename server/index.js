@@ -35,13 +35,18 @@ app.get('/api/products', (req, res, next) => {
 
 app.get('/api/products/:productId', (req, res, next) => {
   const sql = `
-    select "*"
+    select *
       from "products"
-     where "productId: = $1
+     where "productId" = $1
   `;
   const params = [req.params.productId];
   db.query(sql, params)
-    .then(result => res.json(result.rows[0]))
+    .then(result => {
+      if (!result.rows[0]) {
+        next(new ClientError(`Unable to find  id of ${params[0]}`), 404);
+      }
+      res.json(result.rows[0]);
+    })
     .catch(err => next(err));
 });
 
