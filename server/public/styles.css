@@ -5,4 +5,10 @@ body {
 .card-img{
   object-fit: contain;
   height: 150px;
+
+}
+
+.detail-img {
+  object-fit: contain;
+  height: 190px;
 }
