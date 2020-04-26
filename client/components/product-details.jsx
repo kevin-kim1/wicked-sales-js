@@ -7,4 +7,14 @@ export default class ProductDetail extends React.Component {
       product: null
     };
   }
+
+  componentDidMount() {
+    fetch('/api/products/1')
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          product: data
+        });
+      });
+  }
 }
