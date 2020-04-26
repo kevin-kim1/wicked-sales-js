@@ -45,7 +45,7 @@ app.get('/api/products/:productId', (req, res, next) => {
       if (!result.rows[0]) {
         next(new ClientError(`Unable to find  id of ${params[0]}`), 404);
       }
-      res.json(result.rows[0]);
+      return res.json(result.rows[0]);
     })
     .catch(err => next(err));
 });
